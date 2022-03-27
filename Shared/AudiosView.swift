@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct AudiosView: View {
+    
+    @EnvironmentObject var audiosFetcher: AudiosFetcher
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(audiosFetcher.audios, id: \.id) { audio in
+            AudioRowView(title: audio.title, artist: audio.artist)
+        }.onAppear {
+            audiosFetcher.fetchAudios()
+        }
     }
 }
 

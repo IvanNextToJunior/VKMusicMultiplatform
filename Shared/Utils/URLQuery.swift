@@ -28,4 +28,8 @@ struct URLQuery {
         return components.url?.absoluteString
     }
     
+    static func getMP3FromM3U8(url: String) {
+        
+    }
+    
 }
