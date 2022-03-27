@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		332F2C1DAAA741A2A960A6E7 /* libPods-VKMisicMultiplatform (iOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C852B5104D7E856CB5E4F /* libPods-VKMisicMultiplatform (iOS).a */; };
+		4C34724EDE9D396FB1E636AC /* libPods-VKMisicMultiplatform (macOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 091349D71F1B10C8B3F6F606 /* libPods-VKMisicMultiplatform (macOS).a */; };
+		CEB998B427F053B00030BED9 /* VKMisicMultiplatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */; };
+		CEB998B527F053B00030BED9 /* VKMisicMultiplatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */; };
+		CEB998B627F053B00030BED9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998A527F053AF0030BED9 /* ContentView.swift */; };
+		CEB998B727F053B00030BED9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998A527F053AF0030BED9 /* ContentView.swift */; };
+		CEB998B827F053B00030BED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB998A627F053B00030BED9 /* Assets.xcassets */; };
+		CEB998B927F053B00030BED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB998A627F053B00030BED9 /* Assets.xcassets */; };
+		CEB998C327F055460030BED9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998C227F055460030BED9 /* LoginView.swift */; };
+		CEB998C427F055460030BED9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998C227F055460030BED9 /* LoginView.swift */; };
+		CEB998C727F059B10030BED9 /* VKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998C627F059B10030BED9 /* VKClient.swift */; };
+		CEB998C927F05A490030BED9 /* TokenReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998C827F05A490030BED9 /* TokenReceiver.swift */; };
+		CEB998CA27F05A490030BED9 /* TokenReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998C827F05A490030BED9 /* TokenReceiver.swift */; };
+		CEB998CB27F05A4C0030BED9 /* VKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998C627F059B10030BED9 /* VKClient.swift */; };
+		CEB998CD27F063390030BED9 /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998CC27F063390030BED9 /* AuthorizationResponse.swift */; };
+		CEB998CE27F063390030BED9 /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998CC27F063390030BED9 /* AuthorizationResponse.swift */; };
+		CEB998D027F07BCE0030BED9 /* ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998CF27F07BCE0030BED9 /* ValidationView.swift */; };
+		CEB998D127F07BCE0030BED9 /* ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998CF27F07BCE0030BED9 /* ValidationView.swift */; };
+		CEB998D327F082360030BED9 /* TwoFactorAuthorizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998D227F082360030BED9 /* TwoFactorAuthorizationHelper.swift */; };
+		CEB998D427F082360030BED9 /* TwoFactorAuthorizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998D227F082360030BED9 /* TwoFactorAuthorizationHelper.swift */; };
+		CEB998D727F082AF0030BED9 /* URLQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998D627F082AF0030BED9 /* URLQuery.swift */; };
+		CEB998D827F082AF0030BED9 /* URLQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998D627F082AF0030BED9 /* URLQuery.swift */; };
+		CEF1CF1327F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1227F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift */; };
+		CEF1CF1427F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1227F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift */; };
+		CEF1CF1627F0BE4300A55A7B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1527F0BE4300A55A7B /* Preferences.swift */; };
+		CEF1CF1727F0BE4300A55A7B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1527F0BE4300A55A7B /* Preferences.swift */; };
+		CEF1CF1927F0C0C400A55A7B /* AudiosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */; };
+		CEF1CF1A27F0C0C400A55A7B /* AudiosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		091349D71F1B10C8B3F6F606 /* libPods-VKMisicMultiplatform (macOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKMisicMultiplatform (macOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B3C02180B6A306E082300A9 /* Pods-VKMisicMultiplatform (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKMisicMultiplatform (macOS).release.xcconfig"; path = "Target Support Files/Pods-VKMisicMultiplatform (macOS)/Pods-VKMisicMultiplatform (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		2DDD046EE0894A004C88604F /* Pods-VKMisicMultiplatform (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKMisicMultiplatform (iOS).release.xcconfig"; path = "Target Support Files/Pods-VKMisicMultiplatform (iOS)/Pods-VKMisicMultiplatform (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		3C081E00DF79701D79BC0B81 /* Pods-VKMisicMultiplatform (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKMisicMultiplatform (macOS).debug.xcconfig"; path = "Target Support Files/Pods-VKMisicMultiplatform (macOS)/Pods-VKMisicMultiplatform (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		5A0C852B5104D7E856CB5E4F /* libPods-VKMisicMultiplatform (iOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKMisicMultiplatform (iOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E19BF4133F78D009B9B8CB2 /* Pods-VKMisicMultiplatform (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKMisicMultiplatform (iOS).debug.xcconfig"; path = "Target Support Files/Pods-VKMisicMultiplatform (iOS)/Pods-VKMisicMultiplatform (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKMisicMultiplatformApp.swift; sourceTree = "<group>"; };
+		CEB998A527F053AF0030BED9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEB998A627F053B00030BED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEB998AB27F053B00030BED9 /* VKMisicMultiplatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKMisicMultiplatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB998B127F053B00030BED9 /* VKMisicMultiplatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKMisicMultiplatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB998B327F053B00030BED9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CEB998C227F055460030BED9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CEB998C627F059B10030BED9 /* VKClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKClient.swift; sourceTree = "<group>"; };
+		CEB998C827F05A490030BED9 /* TokenReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenReceiver.swift; sourceTree = "<group>"; };
+		CEB998CC27F063390030BED9 /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
+		CEB998CF27F07BCE0030BED9 /* ValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationView.swift; sourceTree = "<group>"; };
+		CEB998D227F082360030BED9 /* TwoFactorAuthorizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFactorAuthorizationHelper.swift; sourceTree = "<group>"; };
+		CEB998D627F082AF0030BED9 /* URLQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQuery.swift; sourceTree = "<group>"; };
+		CEF1CF1227F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFactorAuthorizationResponse.swift; sourceTree = "<group>"; };
+		CEF1CF1527F0BE4300A55A7B /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiosView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEB998A827F053B00030BED9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332F2C1DAAA741A2A960A6E7 /* libPods-VKMisicMultiplatform (iOS).a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB998AE27F053B00030BED9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C34724EDE9D396FB1E636AC /* libPods-VKMisicMultiplatform (macOS).a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43DBEAD7345EE30769A3C422 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A0C852B5104D7E856CB5E4F /* libPods-VKMisicMultiplatform (iOS).a */,
+				091349D71F1B10C8B3F6F606 /* libPods-VKMisicMultiplatform (macOS).a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97645C20BE46B9E9106E7551 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E19BF4133F78D009B9B8CB2 /* Pods-VKMisicMultiplatform (iOS).debug.xcconfig */,
+				2DDD046EE0894A004C88604F /* Pods-VKMisicMultiplatform (iOS).release.xcconfig */,
+				3C081E00DF79701D79BC0B81 /* Pods-VKMisicMultiplatform (macOS).debug.xcconfig */,
+				0B3C02180B6A306E082300A9 /* Pods-VKMisicMultiplatform (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CEB9989E27F053AF0030BED9 = {
+			isa = PBXGroup;
+			children = (
+				CEB998A327F053AF0030BED9 /* Shared */,
+				CEB998B227F053B00030BED9 /* macOS */,
+				CEB998AC27F053B00030BED9 /* Products */,
+				97645C20BE46B9E9106E7551 /* Pods */,
+				43DBEAD7345EE30769A3C422 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEB998A327F053AF0030BED9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CEB998D527F0827F0030BED9 /* Utils */,
+				CEB998C527F059A20030BED9 /* VK */,
+				CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */,
+				CEB998A527F053AF0030BED9 /* ContentView.swift */,
+				CEB998C227F055460030BED9 /* LoginView.swift */,
+				CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */,
+				CEF1CF1527F0BE4300A55A7B /* Preferences.swift */,
+				CEB998CF27F07BCE0030BED9 /* ValidationView.swift */,
+				CEB998A627F053B00030BED9 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CEB998AC27F053B00030BED9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEB998AB27F053B00030BED9 /* VKMisicMultiplatform.app */,
+				CEB998B127F053B00030BED9 /* VKMisicMultiplatform.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEB998B227F053B00030BED9 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEB998B327F053B00030BED9 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		CEB998C527F059A20030BED9 /* VK */ = {
+			isa = PBXGroup;
+			children = (
+				CEB998C627F059B10030BED9 /* VKClient.swift */,
+				CEB998C827F05A490030BED9 /* TokenReceiver.swift */,
+				CEB998D227F082360030BED9 /* TwoFactorAuthorizationHelper.swift */,
+				CEF1CF1227F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift */,
+				CEB998CC27F063390030BED9 /* AuthorizationResponse.swift */,
+			);
+			path = VK;
+			sourceTree = "<group>";
+		};
+		CEB998D527F0827F0030BED9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CEB998D627F082AF0030BED9 /* URLQuery.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEB998AA27F053B00030BED9 /* VKMisicMultiplatform (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB998BC27F053B00030BED9 /* Build configuration list for PBXNativeTarget "VKMisicMultiplatform (iOS)" */;
+			buildPhases = (
+				DE40D3D052616FDD412C2062 /* [CP] Check Pods Manifest.lock */,
+				CEB998A727F053B00030BED9 /* Sources */,
+				CEB998A827F053B00030BED9 /* Frameworks */,
+				CEB998A927F053B00030BED9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VKMisicMultiplatform (iOS)";
+			productName = "VKMisicMultiplatform (iOS)";
+			productReference = CEB998AB27F053B00030BED9 /* VKMisicMultiplatform.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEB998B027F053B00030BED9 /* VKMisicMultiplatform (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB998BF27F053B00030BED9 /* Build configuration list for PBXNativeTarget "VKMisicMultiplatform (macOS)" */;
+			buildPhases = (
+				AEE99099FBF605046BB1D52B /* [CP] Check Pods Manifest.lock */,
+				CEB998AD27F053B00030BED9 /* Sources */,
+				CEB998AE27F053B00030BED9 /* Frameworks */,
+				CEB998AF27F053B00030BED9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VKMisicMultiplatform (macOS)";
+			productName = "VKMisicMultiplatform (macOS)";
+			productReference = CEB998B127F053B00030BED9 /* VKMisicMultiplatform.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEB9989F27F053AF0030BED9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					CEB998AA27F053B00030BED9 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					CEB998B027F053B00030BED9 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = CEB998A227F053AF0030BED9 /* Build configuration list for PBXProject "VKMisicMultiplatform" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEB9989E27F053AF0030BED9;
+			productRefGroup = CEB998AC27F053B00030BED9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEB998AA27F053B00030BED9 /* VKMisicMultiplatform (iOS) */,
+				CEB998B027F053B00030BED9 /* VKMisicMultiplatform (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEB998A927F053B00030BED9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB998B827F053B00030BED9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB998AF27F053B00030BED9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB998B927F053B00030BED9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AEE99099FBF605046BB1D52B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKMisicMultiplatform (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE40D3D052616FDD412C2062 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKMisicMultiplatform (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEB998A727F053B00030BED9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB998C327F055460030BED9 /* LoginView.swift in Sources */,
+				CEB998C727F059B10030BED9 /* VKClient.swift in Sources */,
+				CEB998B627F053B00030BED9 /* ContentView.swift in Sources */,
+				CEF1CF1927F0C0C400A55A7B /* AudiosView.swift in Sources */,
+				CEB998D327F082360030BED9 /* TwoFactorAuthorizationHelper.swift in Sources */,
+				CEB998D027F07BCE0030BED9 /* ValidationView.swift in Sources */,
+				CEB998C927F05A490030BED9 /* TokenReceiver.swift in Sources */,
+				CEF1CF1327F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift in Sources */,
+				CEF1CF1627F0BE4300A55A7B /* Preferences.swift in Sources */,
+				CEB998D727F082AF0030BED9 /* URLQuery.swift in Sources */,
+				CEB998CD27F063390030BED9 /* AuthorizationResponse.swift in Sources */,
+				CEB998B427F053B00030BED9 /* VKMisicMultiplatformApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB998AD27F053B00030BED9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB998CA27F05A490030BED9 /* TokenReceiver.swift in Sources */,
+				CEB998C427F055460030BED9 /* LoginView.swift in Sources */,
+				CEB998CB27F05A4C0030BED9 /* VKClient.swift in Sources */,
+				CEF1CF1A27F0C0C400A55A7B /* AudiosView.swift in Sources */,
+				CEB998D427F082360030BED9 /* TwoFactorAuthorizationHelper.swift in Sources */,
+				CEB998D127F07BCE0030BED9 /* ValidationView.swift in Sources */,
+				CEB998B727F053B00030BED9 /* ContentView.swift in Sources */,
+				CEF1CF1427F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift in Sources */,
+				CEF1CF1727F0BE4300A55A7B /* Preferences.swift in Sources */,
+				CEB998D827F082AF0030BED9 /* URLQuery.swift in Sources */,
+				CEB998CE27F063390030BED9 /* AuthorizationResponse.swift in Sources */,
+				CEB998B527F053B00030BED9 /* VKMisicMultiplatformApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CEB998BA27F053B00030BED9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEB998BB27F053B00030BED9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CEB998BD27F053B00030BED9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E19BF4133F78D009B9B8CB2 /* Pods-VKMisicMultiplatform (iOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZNCGWW299S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.test.VKMisicMultiplatform;
+				PRODUCT_NAME = VKMisicMultiplatform;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEB998BE27F053B00030BED9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DDD046EE0894A004C88604F /* Pods-VKMisicMultiplatform (iOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZNCGWW299S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.test.VKMisicMultiplatform;
+				PRODUCT_NAME = VKMisicMultiplatform;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEB998C027F053B00030BED9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C081E00DF79701D79BC0B81 /* Pods-VKMisicMultiplatform (macOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZNCGWW299S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.test.VKMisicMultiplatform;
+				PRODUCT_NAME = VKMisicMultiplatform;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CEB998C127F053B00030BED9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B3C02180B6A306E082300A9 /* Pods-VKMisicMultiplatform (macOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZNCGWW299S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.test.VKMisicMultiplatform;
+				PRODUCT_NAME = VKMisicMultiplatform;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEB998A227F053AF0030BED9 /* Build configuration list for PBXProject "VKMisicMultiplatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB998BA27F053B00030BED9 /* Debug */,
+				CEB998BB27F053B00030BED9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB998BC27F053B00030BED9 /* Build configuration list for PBXNativeTarget "VKMisicMultiplatform (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB998BD27F053B00030BED9 /* Debug */,
+				CEB998BE27F053B00030BED9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB998BF27F053B00030BED9 /* Build configuration list for PBXNativeTarget "VKMisicMultiplatform (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB998C027F053B00030BED9 /* Debug */,
+				CEB998C127F053B00030BED9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEB9989F27F053AF0030BED9 /* Project object */;
+}
