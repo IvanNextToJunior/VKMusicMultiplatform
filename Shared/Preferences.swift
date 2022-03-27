@@ -13,7 +13,7 @@ class Preferences: ObservableObject {
     let userDefaults = UserDefaults.standard
     
     init() {
-        accessToken = userDefaults.string(forKey: "accessToken") ?? ""
+        accessToken = userDefaults.string(forKey: "accessToken")
     }
     
     @Published var accessToken: String? {

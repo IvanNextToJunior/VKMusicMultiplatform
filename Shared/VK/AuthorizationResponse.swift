@@ -17,7 +17,7 @@ struct AuthorizationResponse: Decodable {
     var access_token: String?
     var webview_refresh_token: String?
     var webview_access_token: String?
-    var webview_access_token_expires_in: Int?
+    var webview_access_token_expires_in: String?
     var expires_in: Int?
     var trusted_hash: String?
 }
