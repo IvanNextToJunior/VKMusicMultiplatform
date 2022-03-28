@@ -40,14 +40,28 @@ class AudioItem: ObservableObject, Identifiable {
 
 class AudioItems: ObservableObject {
     @Published var items: [AudioItem]
+    var selectedItem: AudioItem?
+    private var cancellables = [AnyCancellable]()
     
     init() {
         self.items = []
     }
     
     init(audios: [Audio]) {
-        self.items = audios.map {
-            AudioItem(audio: $0)
+        items = []
+        
+        for audio in audios {
+            let audioItem = AudioItem(audio: audio)
+            items.append(audioItem)
         }
+        
+        for item in self.items {
+            let publisher = item.$isPlaying.sink(receiveValue: { val2 in
+                print("CHANGE", val2)
+            })
+            cancellables.append(publisher)
+        }
+        
     }
+    
 }
