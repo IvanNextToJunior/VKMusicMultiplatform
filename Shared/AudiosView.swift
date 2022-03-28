@@ -12,8 +12,11 @@ struct AudiosView: View {
     @EnvironmentObject var audiosFetcher: AudiosFetcher
     
     var body: some View {
-        List(audiosFetcher.audios, id: \.id) { audio in
-            AudioRowView(title: audio.title, artist: audio.artist)
+        List {
+            ForEach(audiosFetcher.audios, id: \.id) { audio in
+                AudioRowView(title: audio.title, artist: audio.artist)
+                Divider()
+            }
         }.onAppear {
             audiosFetcher.fetchAudios()
         }

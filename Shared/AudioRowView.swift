@@ -11,11 +11,22 @@ struct AudioRowView: View {
     
     @State var title: String
     @State var artist: String
+    @State var isPlaying = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(title)
-            Text(artist)
+        HStack {
+            Button(action: {
+                isPlaying.toggle()
+            }) {
+                Image(systemName: isPlaying ? "pause.circle" : "play.circle")
+            }
+            .buttonStyle(BorderlessButtonStyle())
+            .font(.largeTitle)
+            
+            VStack(alignment: .leading) {
+                Text(title).bold()
+                Text(artist).foregroundColor(.gray)
+            }
         }
     }
 }
