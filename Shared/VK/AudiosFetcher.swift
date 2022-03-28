@@ -12,7 +12,7 @@ import Alamofire
 class AudiosFetcher: ObservableObject {
     
     @ObservedObject var preferences = Preferences()
-    @Published var audios = [Audio]()
+    @Published var audioItems = AudioItems()
     
     func fetchAudios() {
         let url = URL(string: URLQuery.buildURL(baseURL: "https://api.vk.com/method/audio.get", params: [
@@ -24,7 +24,7 @@ class AudiosFetcher: ObservableObject {
         AF.request(url, headers: headers).responseDecodable(of: AudiosResponse.self) { response in
             switch response.result {
             case let .success(audiosResponse):
-                self.audios = audiosResponse.response.items
+                self.audioItems = AudioItems(audios: audiosResponse.response.items)
             case let .failure(error):
                 print(error)
             }

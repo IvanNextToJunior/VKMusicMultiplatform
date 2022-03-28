@@ -13,11 +13,9 @@ struct AudiosView: View {
     
     var body: some View {
         List {
-            ForEach(audiosFetcher.audios, id: \.id) { audio in
+            ForEach(audiosFetcher.audioItems.items, id: \.id) { item in
                 AudioRowView(
-                    title: audio.title,
-                    artist: audio.artist,
-                    duration: audio.duration
+                    audioItem: item
                 )
                 Divider()
             }

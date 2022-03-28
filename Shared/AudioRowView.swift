@@ -15,29 +15,26 @@ struct AudioRowView: View {
         return formatter
     }
     
-    @State var title: String
-    @State var artist: String
-    @State var duration: Int
-    @State var isPlaying = false
+    @ObservedObject var audioItem: AudioItem
     
     var body: some View {
         HStack {
             Button(action: {
-                isPlaying.toggle()
+                audioItem.isPlaying.toggle()
             }) {
-                Image(systemName: isPlaying ? "pause.circle" : "play.circle")
+                Image(systemName: audioItem.isPlaying ? "pause.circle" : "play.circle")
             }
             .buttonStyle(BorderlessButtonStyle())
             .font(.largeTitle)
             
             VStack(alignment: .leading) {
-                Text(title).bold()
-                Text(artist).foregroundColor(.gray)
+                Text(audioItem.audio.title).bold()
+                Text(audioItem.audio.artist).foregroundColor(.gray)
             }
             
             Spacer()
             
-            Text(formatDuration(duration)).foregroundColor(.gray)
+            Text(formatDuration(audioItem.audio.duration)).foregroundColor(.gray)
         }
     }
     
@@ -48,6 +45,6 @@ struct AudioRowView: View {
 
 struct AudioRowView_Previews: PreviewProvider {
     static var previews: some View {
-        AudioRowView(title: "title", artist: "artist", duration: 0)
+        AudioRowView(audioItem: AudioItem())
     }
 }
