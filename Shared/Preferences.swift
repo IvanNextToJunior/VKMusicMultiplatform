@@ -16,7 +16,7 @@ class Preferences: ObservableObject {
         accessToken = UserDefaults.standard.string(forKey: "accessToken")
     }
     
-    var accessToken: String? {
+    @Published var accessToken: String? {
         didSet {
             UserDefaults.standard.set(accessToken, forKey: "accessToken")
         }

@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var preferences = Preferences.shared
+    
     var body: some View {
-        if Preferences.shared.accessToken == nil {
+        if preferences.accessToken == nil {
             LoginView()
         } else {
             AudiosView()

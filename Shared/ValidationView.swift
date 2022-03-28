@@ -14,6 +14,8 @@ struct ValidationView: View {
     @State var password: String
     @State var validationCode = ""
     
+    @ObservedObject var preferences = Preferences.shared
+    
     var body: some View {
         
         VStack {
@@ -25,7 +27,7 @@ struct ValidationView: View {
                     validationCode: validationCode,
                     client: VKClient.officialClient)
                 tokenReceiver.getToken { token, needValidation, validationSid, is2FAApp in
-                    Preferences.shared.accessToken = token
+                    preferences.accessToken = token
                 }
             }
         }
