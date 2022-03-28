@@ -1,4 +1,4 @@
-#VKMusicMultiplatform
+# VKMusicMultiplatform
 
 Based on https://github.com/vodka2/vkaudiotoken-python
 
