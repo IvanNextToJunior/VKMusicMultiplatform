@@ -10,15 +10,15 @@ import Combine
 
 class Preferences: ObservableObject {
     
-    let userDefaults = UserDefaults.standard
+    static let shared = Preferences()
     
-    init() {
-        accessToken = userDefaults.string(forKey: "accessToken")
+    private init() {
+        accessToken = UserDefaults.standard.string(forKey: "accessToken")
     }
     
-    @Published var accessToken: String? {
+    var accessToken: String? {
         didSet {
-            userDefaults.set(accessToken, forKey: "accessToken")
+            UserDefaults.standard.set(accessToken, forKey: "accessToken")
         }
     }
     

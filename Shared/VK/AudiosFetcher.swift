@@ -11,12 +11,11 @@ import Alamofire
 
 class AudiosFetcher: ObservableObject {
     
-    @ObservedObject var preferences = Preferences()
     @Published var audioItems = AudioItems()
     
     func fetchAudios() {
         let url = URL(string: URLQuery.buildURL(baseURL: "https://api.vk.com/method/audio.get", params: [
-            "access_token" : preferences.accessToken!,
+            "access_token" : Preferences.shared.accessToken!,
             "v" : "5.95"
         ])!)!
         let headers = HTTPHeaders(["User-Agent" : VKClient.officialClient.userAgent])
