@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AudiosView: View {
     
-    @EnvironmentObject var audiosFetcher: AudiosFetcher
+    @ObservedObject var audiosFetcher = AudiosFetcher()
     
     var body: some View {
         List {
