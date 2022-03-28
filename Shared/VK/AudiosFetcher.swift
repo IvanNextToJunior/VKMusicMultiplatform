@@ -24,13 +24,10 @@ class AudiosFetcher: ObservableObject {
         AF.request(url, headers: headers).responseDecodable(of: AudiosResponse.self) { response in
             switch response.result {
             case let .success(audiosResponse):
-                print(audiosResponse)
                 self.audios = audiosResponse.response.items
             case let .failure(error):
                 print(error)
             }
-        }.responseString { str in
-//            print(str)
         }
     }
     
