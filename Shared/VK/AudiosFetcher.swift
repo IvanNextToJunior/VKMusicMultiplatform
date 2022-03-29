@@ -12,6 +12,7 @@ import Alamofire
 class AudiosFetcher: ObservableObject {
     
     @Published var audioItems = AudioItems()
+    @Published var playingAudio: AudioItem?
     
     func fetchAudios() {
         let url = URL(string: URLQuery.buildURL(baseURL: "https://api.vk.com/method/audio.get", params: [

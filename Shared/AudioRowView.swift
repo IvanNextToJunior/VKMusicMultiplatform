@@ -15,14 +15,15 @@ struct AudioRowView: View {
         return formatter
     }
     
+    @StateObject var audiosFetcher: AudiosFetcher
     @ObservedObject var audioItem: AudioItem
     
     var body: some View {
         HStack {
             Button(action: {
-                audioItem.isPlaying.toggle()
+                audiosFetcher.playingAudio = (audiosFetcher.playingAudio == audioItem ? nil : audioItem)
             }) {
-                Image(systemName: audioItem.isPlaying ? "pause.circle" : "play.circle")
+                Image(systemName: audiosFetcher.playingAudio == audioItem ? "pause.circle" : "play.circle")
             }
             .buttonStyle(BorderlessButtonStyle())
             .font(.largeTitle)
@@ -45,6 +46,6 @@ struct AudioRowView: View {
 
 struct AudioRowView_Previews: PreviewProvider {
     static var previews: some View {
-        AudioRowView(audioItem: AudioItem())
+        AudioRowView(audiosFetcher: AudiosFetcher(), audioItem: AudioItem())
     }
 }

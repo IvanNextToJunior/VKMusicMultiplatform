@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-struct Audio: Decodable, Identifiable {
+struct Audio: Decodable, Identifiable, Equatable {
     let id = UUID()
     var artist = ""
     var title = ""
@@ -25,10 +25,14 @@ struct AudiosResponse: Decodable {
     var response: Audios
 }
 
-class AudioItem: ObservableObject, Identifiable {
+class AudioItem: ObservableObject, Identifiable, Equatable {
+    
+    static func == (lhs: AudioItem, rhs: AudioItem) -> Bool {
+        lhs.id == rhs.id && lhs.audio == rhs.audio
+    }
+    
     var id = UUID()
     var audio = Audio()
-    @Published var isPlaying = false
     
     init() {
     }
@@ -40,8 +44,6 @@ class AudioItem: ObservableObject, Identifiable {
 
 class AudioItems: ObservableObject {
     @Published var items: [AudioItem]
-    var selectedItem: AudioItem?
-    private var cancellables = [AnyCancellable]()
     
     init() {
         self.items = []
@@ -54,14 +56,6 @@ class AudioItems: ObservableObject {
             let audioItem = AudioItem(audio: audio)
             items.append(audioItem)
         }
-        
-        for item in self.items {
-            let publisher = item.$isPlaying.sink(receiveValue: { val2 in
-                print("CHANGE", val2)
-            })
-            cancellables.append(publisher)
-        }
-        
     }
     
 }

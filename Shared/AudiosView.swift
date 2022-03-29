@@ -9,13 +9,14 @@ import SwiftUI
 
 struct AudiosView: View {
     
-    @ObservedObject var audiosFetcher = AudiosFetcher()
+    @StateObject var audiosFetcher = AudiosFetcher()
     
     var body: some View {
         List {
-            ForEach(audiosFetcher.audioItems.items.indices, id: \.self) { index in
+            ForEach(audiosFetcher.audioItems.items) { item in
                 AudioRowView(
-                    audioItem: audiosFetcher.audioItems.items[index]
+                    audiosFetcher: audiosFetcher,
+                    audioItem: item
                 )
                 Divider()
             }
