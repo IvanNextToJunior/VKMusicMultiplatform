@@ -11,12 +11,13 @@ struct AudiosView: View {
     
     @StateObject var audiosFetcher = AudiosFetcher()
     @StateObject var playingAudioStore = PlayingAudioStore()
+    @StateObject var player = Player()
     
     var body: some View {
         List {
             ForEach(audiosFetcher.audioItems.items) { item in
                 AudioRowView(
-                    audioItem: item, playingAudioStore: playingAudioStore
+                    audioItem: item, playingAudioStore: playingAudioStore, player: player
                 )
                 Divider()
             }

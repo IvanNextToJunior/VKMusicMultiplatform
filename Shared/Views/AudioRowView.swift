@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct AudioRowView: View {
+
+    @ObservedObject var audioItem: AudioItem
+    @StateObject var playingAudioStore: PlayingAudioStore
+    @StateObject var player: Player
     
     private static var durationFormatter: DateComponentsFormatter {
         let formatter = DateComponentsFormatter()
@@ -15,15 +19,22 @@ struct AudioRowView: View {
         return formatter
     }
     
-    @ObservedObject var audioItem: AudioItem
-    @StateObject var playingAudioStore: PlayingAudioStore
+    private var isPlaying: Bool {
+        playingAudioStore.playingAudio == audioItem
+    }
     
     var body: some View {
         HStack {
             Button(action: {
-                playingAudioStore.playingAudio = (playingAudioStore.playingAudio == audioItem ? nil : audioItem)
+                playingAudioStore.playingAudio = isPlaying ? nil : audioItem
+                
+                if isPlaying {
+                    player.play(url: audioItem.audio.url)
+                } else {
+                    player.stop()
+                }
             }) {
-                Image(systemName: playingAudioStore.playingAudio == audioItem ? "pause.circle" : "play.circle")
+                Image(systemName: isPlaying ? "pause.circle" : "play.circle")
             }
             .buttonStyle(BorderlessButtonStyle())
             .font(.largeTitle)
@@ -46,6 +57,6 @@ struct AudioRowView: View {
 
 struct AudioRowView_Previews: PreviewProvider {
     static var previews: some View {
-        AudioRowView(audioItem: AudioItem(), playingAudioStore: PlayingAudioStore())
+        AudioRowView(audioItem: AudioItem(), playingAudioStore: PlayingAudioStore(), player: Player())
     }
 }
