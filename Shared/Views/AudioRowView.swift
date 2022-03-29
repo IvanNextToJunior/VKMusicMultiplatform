@@ -37,6 +37,8 @@ struct AudioRowView: View {
                 playingAudioStore.playingAudio = isPlayingAudio ? nil : audioItem
                 
                 if isPlayingAudio {
+                    // call stop to avoid showing time from previous track for a moment
+                    player.stop()
                     player.play(item: audioItem)
                 } else {
                     player.stop()
