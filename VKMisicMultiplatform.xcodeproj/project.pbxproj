@@ -117,11 +117,11 @@
 		CEB9989E27F053AF0030BED9 = {
 			isa = PBXGroup;
 			children = (
-				CEB998A327F053AF0030BED9 /* Shared */,
-				CEB998B227F053B00030BED9 /* macOS */,
-				CEB998AC27F053B00030BED9 /* Products */,
-				97645C20BE46B9E9106E7551 /* Pods */,
 				43DBEAD7345EE30769A3C422 /* Frameworks */,
+				CEB998B227F053B00030BED9 /* macOS */,
+				97645C20BE46B9E9106E7551 /* Pods */,
+				CEB998AC27F053B00030BED9 /* Products */,
+				CEB998A327F053AF0030BED9 /* Shared */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,13 +131,9 @@
 				CEB998D527F0827F0030BED9 /* Utils */,
 				CEB998C527F059A20030BED9 /* VK */,
 				CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */,
-				CEB998A527F053AF0030BED9 /* ContentView.swift */,
-				CEB998C227F055460030BED9 /* LoginView.swift */,
-				CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */,
-				CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */,
+				CEE5F1ED27F33C6C00E256DC /* Views */,
 				CEE5F1EA27F33AA100E256DC /* PlayingAudioStore.swift */,
 				CEF1CF1527F0BE4300A55A7B /* Preferences.swift */,
-				CEB998CF27F07BCE0030BED9 /* ValidationView.swift */,
 				CEB998A627F053B00030BED9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -180,6 +176,18 @@
 				CEB998D627F082AF0030BED9 /* URLQuery.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CEE5F1ED27F33C6C00E256DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEB998A527F053AF0030BED9 /* ContentView.swift */,
+				CEB998C227F055460030BED9 /* LoginView.swift */,
+				CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */,
+				CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */,
+				CEB998CF27F07BCE0030BED9 /* ValidationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
