@@ -19,22 +19,30 @@ struct AudioRowView: View {
         return formatter
     }
     
-    private var isPlaying: Bool {
+    private var isPlayingAudio: Bool {
         playingAudioStore.playingAudio == audioItem
+    }
+    
+    private var duration: Int {
+        player.remainedSeconds == 0
+            ? audioItem.audio.duration
+            : isPlayingAudio
+                ? player.remainedSeconds
+                : audioItem.audio.duration
     }
     
     var body: some View {
         HStack {
             Button(action: {
-                playingAudioStore.playingAudio = isPlaying ? nil : audioItem
+                playingAudioStore.playingAudio = isPlayingAudio ? nil : audioItem
                 
-                if isPlaying {
-                    player.play(url: audioItem.audio.url)
+                if isPlayingAudio {
+                    player.play(item: audioItem)
                 } else {
                     player.stop()
                 }
             }) {
-                Image(systemName: isPlaying ? "pause.circle" : "play.circle")
+                Image(systemName: isPlayingAudio ? "pause.circle" : "play.circle")
             }
             .buttonStyle(BorderlessButtonStyle())
             .font(.largeTitle)
@@ -46,7 +54,8 @@ struct AudioRowView: View {
             
             Spacer()
             
-            Text(formatDuration(audioItem.audio.duration)).foregroundColor(.gray)
+            Text(formatDuration(duration))
+                .foregroundColor(.gray)
         }
     }
     
