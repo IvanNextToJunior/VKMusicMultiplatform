@@ -35,6 +35,8 @@
 		CEC6DB1427F0EC3400BDB041 /* AudiosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6DB1227F0EC3400BDB041 /* AudiosResponse.swift */; };
 		CEC6DB1627F0F69B00BDB041 /* AudioRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */; };
 		CEC6DB1727F0F69B00BDB041 /* AudioRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */; };
+		CEE5F1EB27F33AA100E256DC /* PlayingAudioStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F1EA27F33AA100E256DC /* PlayingAudioStore.swift */; };
+		CEE5F1EC27F33AA100E256DC /* PlayingAudioStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F1EA27F33AA100E256DC /* PlayingAudioStore.swift */; };
 		CEF1CF1327F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1227F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift */; };
 		CEF1CF1427F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1227F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift */; };
 		CEF1CF1627F0BE4300A55A7B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1527F0BE4300A55A7B /* Preferences.swift */; };
@@ -66,6 +68,7 @@
 		CEC6DB0F27F0D93400BDB041 /* AudiosFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiosFetcher.swift; sourceTree = "<group>"; };
 		CEC6DB1227F0EC3400BDB041 /* AudiosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiosResponse.swift; sourceTree = "<group>"; };
 		CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRowView.swift; sourceTree = "<group>"; };
+		CEE5F1EA27F33AA100E256DC /* PlayingAudioStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingAudioStore.swift; sourceTree = "<group>"; };
 		CEF1CF1227F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFactorAuthorizationResponse.swift; sourceTree = "<group>"; };
 		CEF1CF1527F0BE4300A55A7B /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiosView.swift; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 				CEB998C227F055460030BED9 /* LoginView.swift */,
 				CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */,
 				CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */,
+				CEE5F1EA27F33AA100E256DC /* PlayingAudioStore.swift */,
 				CEF1CF1527F0BE4300A55A7B /* Preferences.swift */,
 				CEB998CF27F07BCE0030BED9 /* ValidationView.swift */,
 				CEB998A627F053B00030BED9 /* Assets.xcassets */,
@@ -330,6 +334,7 @@
 				CEB998B627F053B00030BED9 /* ContentView.swift in Sources */,
 				CEC6DB1327F0EC3400BDB041 /* AudiosResponse.swift in Sources */,
 				CEF1CF1927F0C0C400A55A7B /* AudiosView.swift in Sources */,
+				CEE5F1EB27F33AA100E256DC /* PlayingAudioStore.swift in Sources */,
 				CEB998D327F082360030BED9 /* TwoFactorAuthorizationHelper.swift in Sources */,
 				CEB998D027F07BCE0030BED9 /* ValidationView.swift in Sources */,
 				CEB998C927F05A490030BED9 /* TokenReceiver.swift in Sources */,
@@ -352,6 +357,7 @@
 				CEB998CB27F05A4C0030BED9 /* VKClient.swift in Sources */,
 				CEC6DB1427F0EC3400BDB041 /* AudiosResponse.swift in Sources */,
 				CEF1CF1A27F0C0C400A55A7B /* AudiosView.swift in Sources */,
+				CEE5F1EC27F33AA100E256DC /* PlayingAudioStore.swift in Sources */,
 				CEB998D427F082360030BED9 /* TwoFactorAuthorizationHelper.swift in Sources */,
 				CEB998D127F07BCE0030BED9 /* ValidationView.swift in Sources */,
 				CEB998B727F053B00030BED9 /* ContentView.swift in Sources */,
