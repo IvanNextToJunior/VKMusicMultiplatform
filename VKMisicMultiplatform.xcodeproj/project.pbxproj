@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		332F2C1DAAA741A2A960A6E7 /* libPods-VKMisicMultiplatform (iOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C852B5104D7E856CB5E4F /* libPods-VKMisicMultiplatform (iOS).a */; };
-		3C6D266E28A7CBB600B88DF6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6D266D28A7CBB600B88DF6 /* Storyboard.storyboard */; };
-		3C6D266F28A7CBB600B88DF6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6D266D28A7CBB600B88DF6 /* Storyboard.storyboard */; };
+		3C6D267128A7F74000B88DF6 /* CaptchaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6D267028A7F74000B88DF6 /* CaptchaView.swift */; };
+		3C6D267228A7F74000B88DF6 /* CaptchaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6D267028A7F74000B88DF6 /* CaptchaView.swift */; };
 		4C34724EDE9D396FB1E636AC /* libPods-VKMisicMultiplatform (macOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 091349D71F1B10C8B3F6F606 /* libPods-VKMisicMultiplatform (macOS).a */; };
 		CEB998B427F053B00030BED9 /* VKMisicMultiplatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */; };
 		CEB998B527F053B00030BED9 /* VKMisicMultiplatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */; };
@@ -54,7 +54,7 @@
 		0B3C02180B6A306E082300A9 /* Pods-VKMisicMultiplatform (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKMisicMultiplatform (macOS).release.xcconfig"; path = "Target Support Files/Pods-VKMisicMultiplatform (macOS)/Pods-VKMisicMultiplatform (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		2DDD046EE0894A004C88604F /* Pods-VKMisicMultiplatform (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKMisicMultiplatform (iOS).release.xcconfig"; path = "Target Support Files/Pods-VKMisicMultiplatform (iOS)/Pods-VKMisicMultiplatform (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		3C081E00DF79701D79BC0B81 /* Pods-VKMisicMultiplatform (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKMisicMultiplatform (macOS).debug.xcconfig"; path = "Target Support Files/Pods-VKMisicMultiplatform (macOS)/Pods-VKMisicMultiplatform (macOS).debug.xcconfig"; sourceTree = "<group>"; };
-		3C6D266D28A7CBB600B88DF6 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
+		3C6D267028A7F74000B88DF6 /* CaptchaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptchaView.swift; sourceTree = "<group>"; };
 		5A0C852B5104D7E856CB5E4F /* libPods-VKMisicMultiplatform (iOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKMisicMultiplatform (iOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E19BF4133F78D009B9B8CB2 /* Pods-VKMisicMultiplatform (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKMisicMultiplatform (iOS).debug.xcconfig"; path = "Target Support Files/Pods-VKMisicMultiplatform (iOS)/Pods-VKMisicMultiplatform (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKMisicMultiplatformApp.swift; sourceTree = "<group>"; };
@@ -142,7 +142,6 @@
 				CEB998D527F0827F0030BED9 /* Utils */,
 				CEE5F1ED27F33C6C00E256DC /* Views */,
 				CEB998C527F059A20030BED9 /* VK */,
-				3C6D266D28A7CBB600B88DF6 /* Storyboard.storyboard */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -191,6 +190,7 @@
 			children = (
 				CEB998A527F053AF0030BED9 /* ContentView.swift */,
 				CEB998C227F055460030BED9 /* LoginView.swift */,
+				3C6D267028A7F74000B88DF6 /* CaptchaView.swift */,
 				CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */,
 				CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */,
 				CEB998CF27F07BCE0030BED9 /* ValidationView.swift */,
@@ -280,7 +280,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB998B827F053B00030BED9 /* Assets.xcassets in Resources */,
-				3C6D266E28A7CBB600B88DF6 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB998B927F053B00030BED9 /* Assets.xcassets in Resources */,
-				3C6D266F28A7CBB600B88DF6 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +362,7 @@
 				CEB998CD27F063390030BED9 /* AuthorizationResponse.swift in Sources */,
 				CEE5F1F027F33D3400E256DC /* Player.swift in Sources */,
 				CEB998B427F053B00030BED9 /* VKMisicMultiplatformApp.swift in Sources */,
+				3C6D267128A7F74000B88DF6 /* CaptchaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +387,7 @@
 				CEB998CE27F063390030BED9 /* AuthorizationResponse.swift in Sources */,
 				CEE5F1F127F33D3400E256DC /* Player.swift in Sources */,
 				CEB998B527F053B00030BED9 /* VKMisicMultiplatformApp.swift in Sources */,
+				3C6D267228A7F74000B88DF6 /* CaptchaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
