@@ -27,9 +27,11 @@ struct LoginView: View {
                             if needValidation {
                                 if is2FAApp! {
                                     showsValidationScreen = true
+                                    CaptchaView()
                                 } else {
                                     TwoFactorAuthorizationHelper.validatePhone(validationSid: validationSid!) { success in
                                         showsValidationScreen = true
+                                        CaptchaView()
                                     }
                                 }
                                 
