@@ -31,7 +31,6 @@ struct LoginView: View {
                                 } else {
                                     TwoFactorAuthorizationHelper.validatePhone(validationSid: validationSid!) { success in
                                         showsValidationScreen = true
-                                        CaptchaView()
                                     }
                                 }
                                 
