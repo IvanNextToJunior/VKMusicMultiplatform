@@ -47,6 +47,11 @@ struct TokenReceiver {
                     completion(token, false, nil, nil)
                     return
                 }
+                
+                if let captcha = authResponse.captcha_sid {
+                    completion(captcha, false, nil, nil)
+                    return
+                }
 
                 if let error = authResponse.error {
                     switch error {
