@@ -20,4 +20,6 @@ struct AuthorizationResponse: Decodable {
     var webview_access_token_expires_in: String?
     var expires_in: Int?
     var trusted_hash: String?
+    var captcha_sid: String?
+
 }
