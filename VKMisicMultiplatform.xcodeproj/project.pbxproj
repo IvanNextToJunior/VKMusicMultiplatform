@@ -188,12 +188,12 @@
 		CEE5F1ED27F33C6C00E256DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEB998CF27F07BCE0030BED9 /* ValidationView.swift */,
 				CEB998A527F053AF0030BED9 /* ContentView.swift */,
 				CEB998C227F055460030BED9 /* LoginView.swift */,
 				3C6D267028A7F74000B88DF6 /* CaptchaView.swift */,
 				CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */,
 				CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */,
-				CEB998CF27F07BCE0030BED9 /* ValidationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
