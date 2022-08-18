@@ -15,6 +15,8 @@ struct LoginView: View {
     
     var body: some View {
         if showsValidationScreen {
+            
+            //MARK: ValidationView initialization
             ValidationView(login: login, password: password)
         } else {
             VStack {

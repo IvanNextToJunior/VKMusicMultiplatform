@@ -21,5 +21,9 @@ class Preferences: ObservableObject {
             UserDefaults.standard.set(accessToken, forKey: "accessToken")
         }
     }
-    
+    @Published var captcha: String? {
+        didSet {
+            UserDefaults.standard.set(captcha, forKey: "captcha_sid")
+        }
+    }
 }
