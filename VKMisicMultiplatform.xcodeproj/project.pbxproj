@@ -134,8 +134,8 @@
 		CEB998A327F053AF0030BED9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				CEE5F1EA27F33AA100E256DC /* PlayingAudioStore.swift */,
 				CEF1CF1527F0BE4300A55A7B /* Preferences.swift */,
+				CEE5F1EA27F33AA100E256DC /* PlayingAudioStore.swift */,
 				CEE5F1EF27F33D3400E256DC /* Player.swift */,
 				CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */,
 				CEB998A627F053B00030BED9 /* Assets.xcassets */,
