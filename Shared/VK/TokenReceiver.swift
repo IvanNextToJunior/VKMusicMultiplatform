@@ -33,7 +33,7 @@ struct TokenReceiver {
         ])!)
         
         if !validationCode.isEmpty {
-            url = URL(string: URLQuery.buildURL(baseURL: url.absoluteString, params: ["code" : validationCode])!)
+            url = URL(string: URLQuery.buildURL(baseURL: url.absoluteString, params: ["code" : validationCode, "captcha_sid": Preferences.shared.captcha!, "captcha_key": CaptchaView().captcha_key])!)
         }
     }
     
@@ -59,6 +59,7 @@ struct TokenReceiver {
                         completion(nil, true, authResponse.validation_sid, authResponse.validation_type == "2fa_app")
                     case "invalid_client":
                         print(error)
+
                     default:
                         print(error)
                     }
