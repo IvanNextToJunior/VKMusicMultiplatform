@@ -15,7 +15,7 @@ struct CaptchaView: View {
     
     
     var body: some View {
-        WebImage(url: URL(string: "https://api.vk.com/captcha.php?sid=260120943356")!).scaledToFit()
+        WebImage(url: URL(string: "https://api.vk.com/captcha.php?sid=\(Preferences.shared.captcha!)")!).scaledToFit()
             TextField("Введите текст с картинки", text: $captcha_key)
         Button("Подтвердить") {
            
@@ -26,7 +26,10 @@ struct CaptchaView: View {
                                                                                         "password" : LoginView().password,
                                                                                         "v" : "5.116",
                                                                                         "lang" : "en",
-                                                                                        "scope" : "all"]),
+                                                                                        "scope" : "all",
+                                                                                                   "captcha_sid": Preferences.shared.captcha!,
+                                                                                                   "captcha_key": captcha_key]
+    ),
                  let url = URL(string: urlString) else { return }
             let headers = HTTPHeaders(["User-Agent" : VKClient.officialClient.userAgent])
             
