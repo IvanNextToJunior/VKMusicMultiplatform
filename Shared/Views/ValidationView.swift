@@ -27,7 +27,7 @@ struct ValidationView: View {
                     password: password,
                     validationCode: validationCode,
                     client: VKClient.officialClient)
-                tokenReceiver.getToken { token, needValidation, validationSid, is2FAApp in
+                tokenReceiver.getToken { token, needValidation, validationSid, is2FAApp, error in
                     preferences.accessToken = token
                     preferences.captcha = validationSid
                 }

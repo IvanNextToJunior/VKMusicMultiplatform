@@ -37,35 +37,30 @@ struct TokenReceiver {
         }
     }
     
-    func getToken(completion: @escaping (String?, Bool, String?, Bool?) -> Void) {
+    func getToken(completion: @escaping (String?, Bool, String?, Bool?, String?) -> Void) {
         let headers = HTTPHeaders(["User-Agent" : userAgent])
         
         AF.request(url, headers: headers).responseDecodable(of: AuthorizationResponse.self) { response in
             switch response.result {
             case let .success(authResponse):
                 if let token = authResponse.access_token {
-                    completion(token, false, nil, nil)
+                    completion(token, false, nil, nil, nil)
                     return
                 }
                 
-                if let captcha = authResponse.captcha_sid {
-                    completion(captcha, false, nil, nil)
+                if let captcha = authResponse.captcha_sid { // TODO: rewrite
+                    completion(captcha, false, nil, nil, nil)
                     return
                 }
 
                 if let error = authResponse.error {
                     switch error {
                     case "need_validation":
-                        completion(nil, true, authResponse.validation_sid, authResponse.validation_type == "2fa_app")
-                    case "invalid_client":
-                        print(error)
-
+                        completion(nil, true, authResponse.validation_sid, authResponse.validation_type == "2fa_app", nil)
                     default:
-                        print(error)
+                        completion(nil, false, nil, nil, authResponse.error_description)
                     }
                 }
-                
-                completion(nil, false, nil, nil)
 
             case let .failure(error):
                 print(error)

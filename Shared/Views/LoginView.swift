@@ -13,6 +13,9 @@ struct LoginView: View {
     @State var password = ""
     @State var showsValidationScreen = false
     
+    @State var showsErrorAlert = false
+    @State var errorMessage = ""
+    
     var body: some View {
         if showsValidationScreen {
             
@@ -25,7 +28,14 @@ struct LoginView: View {
                 HStack {
                     Button("Login") {
                         let tokenReceiver = TokenReceiver(login: login, password: password, client: VKClient.officialClient)
-                        tokenReceiver.getToken { token, needValidation, validationSid, is2FAApp in
+                        tokenReceiver.getToken { token, needValidation, validationSid, is2FAApp, error in
+                            errorMessage = error ?? ""
+                            showsErrorAlert = (error != nil)
+                            
+                            if showsErrorAlert {
+                                return
+                            }
+                            
                             if needValidation {
                                 if is2FAApp! {
                                     showsValidationScreen = true
@@ -44,9 +54,12 @@ struct LoginView: View {
                     }
                     Spacer()
                 }
+            }.alert(errorMessage, isPresented: $showsErrorAlert) {
+                Button("OK", role: .cancel) { }
             }
         }
     }
+    
 }
 
 struct LoginView_Previews: PreviewProvider {
