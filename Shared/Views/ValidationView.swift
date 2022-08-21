@@ -21,7 +21,7 @@ struct ValidationView: View {
         VStack {
             TextField("Enter validation code", text: $validationCode)
             Button("Submit") {
-               //MARK: Get token
+               //MARK: Initialization
                 let tokenReceiver = TokenReceiver(
                     login: login,
                     password: password,
