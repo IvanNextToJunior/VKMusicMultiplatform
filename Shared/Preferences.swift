@@ -13,6 +13,10 @@ class Preferences: ObservableObject {
     static let shared = Preferences()
     
     private init() {
+        if let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true).first {
+            print("Preferences path: \(path)/Preferences")
+        }
+        
         accessToken = UserDefaults.standard.string(forKey: "accessToken")
     }
     
