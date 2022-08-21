@@ -28,20 +28,20 @@ struct LoginView: View {
                 HStack {
                     Button("Login") {
                         let tokenReceiver = TokenReceiver(login: login, password: password, client: VKClient.officialClient)
-                        tokenReceiver.getToken { token, needValidation, validationSid, is2FAApp, error in
-                            errorMessage = error ?? ""
-                            showsErrorAlert = (error != nil)
+                        tokenReceiver.getToken { authorizationData in
+                            errorMessage = authorizationData.errorMessage
+                            showsErrorAlert = !errorMessage.isEmpty
                             
                             if showsErrorAlert {
                                 return
                             }
                             
-                            if needValidation {
-                                if is2FAApp! {
+                            if authorizationData.needValidation {
+                                if authorizationData.is2FAApp {
                                     showsValidationScreen = true
                                     CaptchaView()
                                 } else {
-                                    TwoFactorAuthorizationHelper.validatePhone(validationSid: validationSid!) { success in
+                                    TwoFactorAuthorizationHelper.validatePhone(validationSid: authorizationData.validationSid) { success in
                                         showsValidationScreen = true
                                     }
                                 }
@@ -49,7 +49,7 @@ struct LoginView: View {
                                 return
                             }
                             
-                            print(token ?? "")
+                            print(authorizationData.token)
                         }
                     }
                     Spacer()
