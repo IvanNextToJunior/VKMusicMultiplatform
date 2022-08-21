@@ -21,5 +21,6 @@ struct AuthorizationResponse: Decodable {
     var expires_in: Int?
     var trusted_hash: String?
     var captcha_sid: String?
+    var captcha_img: String?
 
 }

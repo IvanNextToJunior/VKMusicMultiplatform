@@ -11,24 +11,43 @@ struct LoginView: View {
     
     @State var login = ""
     @State var password = ""
-    @State var showsValidationScreen = false
-    
+    @State var showsValidationView = false
+    @State var validationCode = ""
     @State var showsErrorAlert = false
     @State var errorMessage = ""
+    @State var captchaSid = ""
+    @State var captchaKey = ""
+    @State var shouldApplyCaptcha = false
     
     var body: some View {
-        if showsValidationScreen {
-            
-            //MARK: ValidationView initialization
-            ValidationView(login: login, password: password)
+        if showsValidationView {
+            ValidationView(
+                login: login,
+                password: password,
+                validationCode: $validationCode
+            )
+        } else if (!captchaSid.isEmpty) {
+            CaptchaView(login: login,
+                        password: password,
+                        validationCode: $validationCode,
+                        captchaKey: $captchaKey,
+                        captchaSid: $captchaSid,
+                        shouldApplyCaptcha: $shouldApplyCaptcha
+            )
         } else {
             VStack {
                 TextField("Login", text: $login)
                 TextField("Password", text: $password)
                 HStack {
                     Button("Login") {
-                        let tokenReceiver = TokenReceiver(login: login, password: password, client: VKClient.officialClient)
+                        let tokenReceiver = TokenReceiver(
+                            login: login,
+                            password: password,
+                            client: VKClient.officialClient)
                         tokenReceiver.getToken { authorizationData in
+                            
+                            // handle errors
+                            
                             errorMessage = authorizationData.errorMessage
                             showsErrorAlert = !errorMessage.isEmpty
                             
@@ -36,20 +55,30 @@ struct LoginView: View {
                                 return
                             }
                             
+                            // handle validation
+                            
                             if authorizationData.needValidation {
                                 if authorizationData.is2FAApp {
-                                    showsValidationScreen = true
-                                    CaptchaView()
+                                    showsValidationView = true
                                 } else {
                                     TwoFactorAuthorizationHelper.validatePhone(validationSid: authorizationData.validationSid) { success in
-                                        showsValidationScreen = true
+                                        showsValidationView = true
                                     }
                                 }
                                 
                                 return
                             }
                             
-                            print(authorizationData.token)
+                            // handle captcha
+                            
+                            if authorizationData.needCaptcha {
+                                captchaSid = authorizationData.captchaSid
+                                return
+                            }
+                            
+                            // got token
+                            
+                            print("Token successfully received", authorizationData.token)
                         }
                     }
                     Spacer()

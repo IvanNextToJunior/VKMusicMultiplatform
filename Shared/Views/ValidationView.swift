@@ -12,7 +12,7 @@ struct ValidationView: View {
     
     @State var login: String
     @State var password: String
-    @State var validationCode = ""
+    @Binding var validationCode: String
     
     @State var showsErrorAlert = false
     @State var errorMessage = ""
@@ -40,7 +40,6 @@ struct ValidationView: View {
                     }
                     
                     preferences.accessToken = authorizationData.token
-//                    preferences.captcha = validationSid // TODO: rewrite
                 }
             }
         }.alert(errorMessage, isPresented: $showsErrorAlert) {
@@ -51,6 +50,6 @@ struct ValidationView: View {
 
 struct ValidationView_Previews: PreviewProvider {
     static var previews: some View {
-        ValidationView(login: "", password: "")
+        ValidationView(login: "", password: "", validationCode: .constant(""))
     }
 }

@@ -15,7 +15,12 @@ struct TokenReceiver {
     var url: URL!
     var userAgent: String
     
-    init(login: String, password: String, validationCode: String = "", client: VKClient) {
+    init(login: String,
+         password: String,
+         validationCode: String = "",
+         captchaSid: String = "",
+         captchaKey: String = "",
+         client: VKClient) {
         userAgent = client.userAgent
         
         let deviceId = generateRandomString()
@@ -32,18 +37,18 @@ struct TokenReceiver {
             "2fa_supported" : "1"
         ])!)
         
+        var params = [String : String]()
+        
         if !validationCode.isEmpty {
-            var params = [
-                "code" : validationCode
-            ]
-            
-            if let captcha = Preferences.shared.captcha { // TODO: maybe rewrite
-                params["captcha_sid"] = captcha
-                params["captcha_key"] = "" // TODO: set
-            }
-            
-            url = URL(string: URLQuery.buildURL(baseURL: url.absoluteString, params: params)!)
+            params["code"] = validationCode
         }
+        
+        if !captchaSid.isEmpty && !captchaKey.isEmpty {
+            params["captcha_sid"] = captchaSid
+            params["captcha_key"] = captchaKey
+        }
+        
+        url = URL(string: URLQuery.buildURL(baseURL: url.absoluteString, params: params)!)
     }
     
     func getToken(completion: @escaping (AuthorizationData) -> Void) {
@@ -66,8 +71,9 @@ struct TokenReceiver {
                         data.is2FAApp = authResponse.validation_type == "2fa_app"
                         
                     case "need_captcha":
-                        break
-                        // TODO: implement
+                        data.needCaptcha = true
+                        data.captchaSid = authResponse.captcha_sid!
+                        data.captchaImage = authResponse.captcha_img!
 
                     default:
                         data.errorMessage = authResponse.error_description!

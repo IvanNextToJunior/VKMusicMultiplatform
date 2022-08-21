@@ -10,8 +10,14 @@ import Foundation
 struct AuthorizationData {
     
     var token = ""
+    
     var needValidation = false
     var validationSid = ""
+    
+    var needCaptcha = false
+    var captchaSid = ""
+    var captchaImage = ""
+    
     var is2FAApp = false
     var errorMessage = ""
     
