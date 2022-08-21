@@ -12,7 +12,7 @@ struct ContentView: View {
     @ObservedObject var preferences = Preferences.shared
     
     var body: some View {
-        if preferences.accessToken == nil {
+        if preferences.accessToken == nil || preferences.accessToken!.isEmpty {
             LoginView()
         } else {
             AudiosView()
