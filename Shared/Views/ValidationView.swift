@@ -14,6 +14,9 @@ struct ValidationView: View {
     @State var password: String
     @State var validationCode = ""
     
+    @State var showsErrorAlert = false
+    @State var errorMessage = ""
+    
     @ObservedObject var preferences = Preferences.shared
     
     var body: some View {
@@ -28,10 +31,20 @@ struct ValidationView: View {
                     validationCode: validationCode,
                     client: VKClient.officialClient)
                 tokenReceiver.getToken { authorizationData in
+                    
+                    errorMessage = authorizationData.errorMessage
+                    showsErrorAlert = !errorMessage.isEmpty
+                    
+                    if showsErrorAlert {
+                        return
+                    }
+                    
                     preferences.accessToken = authorizationData.token
 //                    preferences.captcha = validationSid // TODO: rewrite
                 }
             }
+        }.alert(errorMessage, isPresented: $showsErrorAlert) {
+            Button("OK", role: .cancel) { }
         }
     }
 }

@@ -33,7 +33,16 @@ struct TokenReceiver {
         ])!)
         
         if !validationCode.isEmpty {
-            url = URL(string: URLQuery.buildURL(baseURL: url.absoluteString, params: ["code" : validationCode, "captcha_sid": Preferences.shared.captcha!, "captcha_key": CaptchaView().captcha_key])!)
+            var params = [
+                "code" : validationCode
+            ]
+            
+            if let captcha = Preferences.shared.captcha { // TODO: maybe rewrite
+                params["captcha_sid"] = captcha
+                params["captcha_key"] = "" // TODO: set
+            }
+            
+            url = URL(string: URLQuery.buildURL(baseURL: url.absoluteString, params: params)!)
         }
     }
     
