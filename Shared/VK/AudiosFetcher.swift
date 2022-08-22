@@ -14,6 +14,9 @@ class AudiosFetcher: ObservableObject {
     @Published var audioItems = AudioItems()
     @Published var error: VKResponseError?
     
+    /// When getting "Token confirmation required" error:
+    /// В настройках VK ID - безопасность и вход - защита от подозрительных приложений уберите
+    /// https://github.com/vodka2/vk-audio-token/issues/41#issuecomment-1159586230
     func fetchAudios() {
         let url = URL(string: URLQuery.buildURL(baseURL: "https://api.vk.com/method/audio.get", params: [
             "access_token" : Preferences.shared.accessToken!,
