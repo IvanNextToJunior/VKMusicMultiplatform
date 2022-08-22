@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AudiosView: View {
     
+    @State var error: VKResponseError?
     @StateObject var audiosFetcher = AudiosFetcher()
     @StateObject var playingAudioStore = PlayingAudioStore()
     @StateObject var player = Player()
@@ -23,6 +24,8 @@ struct AudiosView: View {
             }
         }.onAppear {
             audiosFetcher.fetchAudios()
+        }.alert(audiosFetcher.error?.error_msg ?? "", isPresented: .constant(audiosFetcher.error != nil)) {
+            Button("OK", role: .cancel) { }
         }
     }
 }

@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct TwoFactorAuthorizationResponseError: Decodable {
+struct VKResponseError: Decodable {
     var error_code: Int
     var error_msg: String
-    var error_text: String
+    var error_text: String?
 }
 
 struct TwoFactorAuthorizationResponse: Decodable {
-    var error: TwoFactorAuthorizationResponseError?
+    var error: VKResponseError?
     var response: Int?
 }

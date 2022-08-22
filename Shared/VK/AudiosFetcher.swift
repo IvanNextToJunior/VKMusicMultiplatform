@@ -12,6 +12,7 @@ import Alamofire
 class AudiosFetcher: ObservableObject {
     
     @Published var audioItems = AudioItems()
+    @Published var error: VKResponseError?
     
     func fetchAudios() {
         let url = URL(string: URLQuery.buildURL(baseURL: "https://api.vk.com/method/audio.get", params: [
@@ -23,10 +24,22 @@ class AudiosFetcher: ObservableObject {
         AF.request(url, headers: headers).responseDecodable(of: AudiosResponse.self) { response in
             switch response.result {
             case let .success(audiosResponse):
-                self.audioItems = AudioItems(audios: audiosResponse.response.items)
+                
+                if let audios = audiosResponse.response {
+                    self.audioItems = AudioItems(audios: audios.items)
+                    return
+                }
+                
+                if let error = audiosResponse.error {
+                    self.error = error
+                    print(error)
+                }
+                
             case let .failure(error):
                 print(error)
             }
+        }.responseString { str in
+            print(str)
         }
     }
     

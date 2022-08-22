@@ -22,7 +22,8 @@ struct Audios: Decodable {
 }
 
 struct AudiosResponse: Decodable {
-    var response: Audios
+    var response: Audios?
+    var error: VKResponseError?
 }
 
 class AudioItem: ObservableObject, Identifiable, Equatable {
