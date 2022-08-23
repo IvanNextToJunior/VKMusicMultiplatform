@@ -24,4 +24,4 @@ Pods
 **/xcschememanagement.plist
 *.xcbkptlist
 *.xcsettings
-/Podfile.lock
+
