@@ -18,6 +18,11 @@ class Preferences: ObservableObject {
     
     func save () {
         userDefaults.set(accessToken, forKey: "accessToken")
+ 
+        if userDefaults.value(forKey: "accessToken") != nil {
+            print("Value is \(userDefaults.value(forKey: "accessToken")!)")
+        }
+    
     }
 
 }
