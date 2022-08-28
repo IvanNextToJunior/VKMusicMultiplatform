@@ -11,8 +11,11 @@ import Combine
 class Preferences: ObservableObject {
     
     static let shared = Preferences()
-    private let userDefaults = UserDefaults.standard
  
+    private let userDefaults = UserDefaults.standard
+    private init() {
+        
+    }
     
     @Published var accessToken: String?
     
