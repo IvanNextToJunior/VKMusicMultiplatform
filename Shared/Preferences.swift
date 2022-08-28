@@ -11,7 +11,7 @@ import Combine
 class Preferences: ObservableObject {
     
     static let shared = Preferences()
-    let userDefaults = UserDefaults.standard
+   private let userDefaults = UserDefaults.standard
    
     private init() {
           if let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true).first {
