@@ -40,7 +40,7 @@ struct ValidationView: View {
                     }
                     
                     preferences.accessToken = authorizationData.token
-                    preferences.save()
+           
                 }
             }
         }.alert(errorMessage, isPresented: $showsErrorAlert) {
