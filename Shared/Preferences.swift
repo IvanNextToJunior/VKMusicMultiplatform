@@ -11,21 +11,21 @@ import Combine
 class Preferences: ObservableObject {
     
     static let shared = Preferences()
- 
+    let userDefaults = UserDefaults.standard
    
     private init() {
           if let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true).first {
               print("Preferences path: \(path)/Preferences")
           }
           
-          accessToken = UserDefaults.standard.string(forKey: "accessToken")
+        accessToken = userDefaults.string(forKey: "accessToken")
       }
     
     @Published var accessToken: String? {
         didSet {
-            UserDefaults.standard.set(accessToken, forKey: "accessToken")
-            if UserDefaults.value(forKey: "accessToken") != nil {
-                print("Value is: \(UserDefaults.value(forKey: "accessToken")!)")
+           userDefaults.set(accessToken, forKey: "accessToken")
+            if userDefaults.value(forKey: "accessToken") != nil {
+                print("Value is: \(userDefaults.value(forKey: "accessToken")!)")
             }
         
         }
