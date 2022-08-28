@@ -13,6 +13,7 @@ class Preferences: ObservableObject {
     static let shared = Preferences()
  
     private let userDefaults = UserDefaults.standard
+   
     private init() {
         
     }
