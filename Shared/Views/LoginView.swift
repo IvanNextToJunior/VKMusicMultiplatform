@@ -18,7 +18,7 @@ struct LoginView: View {
     @State var captchaSid = ""
     @State var captchaKey = ""
     @State var shouldApplyCaptcha = false
-    
+    @ObservedObject var preferences = Preferences.shared
     var body: some View {
         if showsValidationView {
             ValidationView(
@@ -50,7 +50,7 @@ struct LoginView: View {
                             
                             errorMessage = authorizationData.errorMessage
                             showsErrorAlert = !errorMessage.isEmpty
-                            
+                            preferences.accessToken = authorizationData.token
                             if showsErrorAlert {
                                 return
                             }
