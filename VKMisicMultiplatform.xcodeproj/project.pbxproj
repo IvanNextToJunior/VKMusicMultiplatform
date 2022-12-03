@@ -232,7 +232,6 @@
 				CEB998AD27F053B00030BED9 /* Sources */,
 				CEB998AE27F053B00030BED9 /* Frameworks */,
 				CEB998AF27F053B00030BED9 /* Resources */,
-				ABAF288CC1E5BFD24D2AA2F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,23 +299,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		ABAF288CC1E5BFD24D2AA2F9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VKMisicMultiplatform (macOS)/Pods-VKMisicMultiplatform (macOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VKMisicMultiplatform (macOS)/Pods-VKMisicMultiplatform (macOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VKMisicMultiplatform (macOS)/Pods-VKMisicMultiplatform (macOS)-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AEE99099FBF605046BB1D52B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
