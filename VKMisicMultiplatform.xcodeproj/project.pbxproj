@@ -36,7 +36,6 @@
 		CEC6DB1027F0D93400BDB041 /* AudiosFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6DB0F27F0D93400BDB041 /* AudiosFetcher.swift */; };
 		CEC6DB1127F0D93400BDB041 /* AudiosFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6DB0F27F0D93400BDB041 /* AudiosFetcher.swift */; };
 		CEC6DB1327F0EC3400BDB041 /* AudiosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6DB1227F0EC3400BDB041 /* AudiosResponse.swift */; };
-		CEC6DB1427F0EC3400BDB041 /* AudiosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6DB1227F0EC3400BDB041 /* AudiosResponse.swift */; };
 		CEC6DB1627F0F69B00BDB041 /* AudioRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */; };
 		CEC6DB1727F0F69B00BDB041 /* AudioRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */; };
 		CEE5F1EB27F33AA100E256DC /* PlayingAudioStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F1EA27F33AA100E256DC /* PlayingAudioStore.swift */; };
@@ -49,6 +48,10 @@
 		CEF1CF1727F0BE4300A55A7B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1527F0BE4300A55A7B /* Preferences.swift */; };
 		CEF1CF1927F0C0C400A55A7B /* AudiosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */; };
 		CEF1CF1A27F0C0C400A55A7B /* AudiosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */; };
+		EDC453DC2A164D9E00733AAF /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC453DB2A164D9E00733AAF /* Audio.swift */; };
+		EDC453DE2A164DD100733AAF /* Audios.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC453DD2A164DD100733AAF /* Audios.swift */; };
+		EDC453E02A164E1600733AAF /* AudioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC453DF2A164E1600733AAF /* AudioItem.swift */; };
+		EDC453E22A164E7C00733AAF /* AudioItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC453E12A164E7C00733AAF /* AudioItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,10 @@
 		CEF1CF1527F0BE4300A55A7B /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		CEF1CF1827F0C0C400A55A7B /* AudiosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiosView.swift; sourceTree = "<group>"; };
 		D5E116911F85610417A5D5AD /* Pods_VKMisicMultiplatform__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKMisicMultiplatform__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC453DB2A164D9E00733AAF /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		EDC453DD2A164DD100733AAF /* Audios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audios.swift; sourceTree = "<group>"; };
+		EDC453DF2A164E1600733AAF /* AudioItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItem.swift; sourceTree = "<group>"; };
+		EDC453E12A164E7C00733AAF /* AudioItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItems.swift; sourceTree = "<group>"; };
 		F8867A8E5C72CAFC061ACD8F /* Pods_VKMisicMultiplatform__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKMisicMultiplatform__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +149,7 @@
 				CEE5F1EF27F33D3400E256DC /* Player.swift */,
 				CEB998A427F053AF0030BED9 /* VKMisicMultiplatformApp.swift */,
 				CEB998A627F053B00030BED9 /* Assets.xcassets */,
+				EDC453DA2A164D5B00733AAF /* Audio Response */,
 				CEB998D527F0827F0030BED9 /* Utils */,
 				CEE5F1ED27F33C6C00E256DC /* Views */,
 				CEB998C527F059A20030BED9 /* VK */,
@@ -176,7 +184,6 @@
 				CEC6DB0F27F0D93400BDB041 /* AudiosFetcher.swift */,
 				CEF1CF1227F0A4DA00A55A7B /* TwoFactorAuthorizationResponse.swift */,
 				CEB998CC27F063390030BED9 /* AuthorizationResponse.swift */,
-				CEC6DB1227F0EC3400BDB041 /* AudiosResponse.swift */,
 			);
 			path = VK;
 			sourceTree = "<group>";
@@ -200,6 +207,18 @@
 				CEC6DB1527F0F69B00BDB041 /* AudioRowView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EDC453DA2A164D5B00733AAF /* Audio Response */ = {
+			isa = PBXGroup;
+			children = (
+				EDC453DB2A164D9E00733AAF /* Audio.swift */,
+				EDC453DD2A164DD100733AAF /* Audios.swift */,
+				CEC6DB1227F0EC3400BDB041 /* AudiosResponse.swift */,
+				EDC453DF2A164E1600733AAF /* AudioItem.swift */,
+				EDC453E12A164E7C00733AAF /* AudioItems.swift */,
+			);
+			name = "Audio Response";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,8 +390,11 @@
 				CEB998C727F059B10030BED9 /* VKClient.swift in Sources */,
 				CEB998B627F053B00030BED9 /* ContentView.swift in Sources */,
 				CEC6DB1327F0EC3400BDB041 /* AudiosResponse.swift in Sources */,
+				EDC453DC2A164D9E00733AAF /* Audio.swift in Sources */,
+				EDC453DE2A164DD100733AAF /* Audios.swift in Sources */,
 				CEF1CF1927F0C0C400A55A7B /* AudiosView.swift in Sources */,
 				CEE5F1EB27F33AA100E256DC /* PlayingAudioStore.swift in Sources */,
+				EDC453E22A164E7C00733AAF /* AudioItems.swift in Sources */,
 				CEB998D327F082360030BED9 /* TwoFactorAuthorizationHelper.swift in Sources */,
 				CEB998D027F07BCE0030BED9 /* ValidationView.swift in Sources */,
 				CEB998C927F05A490030BED9 /* TokenReceiver.swift in Sources */,
@@ -384,6 +406,7 @@
 				CEB998CD27F063390030BED9 /* AuthorizationResponse.swift in Sources */,
 				CEE5F1F027F33D3400E256DC /* Player.swift in Sources */,
 				CEB998B427F053B00030BED9 /* VKMisicMultiplatformApp.swift in Sources */,
+				EDC453E02A164E1600733AAF /* AudioItem.swift in Sources */,
 				3C6D267128A7F74000B88DF6 /* CaptchaView.swift in Sources */,
 				CE17344F28B26C8D00765D19 /* AuthorizationData.swift in Sources */,
 			);
@@ -396,7 +419,6 @@
 				CEB998CA27F05A490030BED9 /* TokenReceiver.swift in Sources */,
 				CEB998C427F055460030BED9 /* LoginView.swift in Sources */,
 				CEB998CB27F05A4C0030BED9 /* VKClient.swift in Sources */,
-				CEC6DB1427F0EC3400BDB041 /* AudiosResponse.swift in Sources */,
 				CEF1CF1A27F0C0C400A55A7B /* AudiosView.swift in Sources */,
 				CEE5F1EC27F33AA100E256DC /* PlayingAudioStore.swift in Sources */,
 				CEB998D427F082360030BED9 /* TwoFactorAuthorizationHelper.swift in Sources */,
